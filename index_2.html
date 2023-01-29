@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<script src="https://kit.fontawesome.com/48cfc9194a.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Concert+One">
+<link rel="stylesheet" href="main_2.css">
+<script src="homework_2.js"></script>
+    <title>Homework Doc 2</title>
+</head>
+<body>
+<!-- Sidebar -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">History</a>
+        <a href="#">Contact</a>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <script>
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "150px";
+    }
+
+    function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+<!-- Header-->
+    <header class="masthead  text-center text-white">
+        <div class="masthead-content">
+            <div class="container px-5">
+                <h1 class="masthead-heading mb-0">JavaScript Homework:</h1>
+                <h2 class="masthead-subheading mb-0">The Sequel</h2>
+            </div>
+        </div>
+        <div class="bg-circle-1 bg-circle"></div>
+        <div class="bg-circle-2 bg-circle"></div>
+        <div class="bg-circle-3 bg-circle"></div>
+        <div class="bg-circle-4 bg-circle"></div>
+    </header>
+
+    <!-- Content section-->
+    <section id="scroll">
+        <div class="container p-5">
+            <div class="row">
+                <img src="static/pileofbluequestionmarks.jpg" alt="Question mark against a pink background">
+                <div class="text-center align-items-center justify-content-center">
+                    <h5>This thing all things devours;<br>
+                        Birds, beasts, trees, flowers;<br>
+                        Gnaws iron, bites steel;<br>
+                        Grinds hard stones to meal;<br>
+                        Slays king, ruins town,<br>
+                        And beats mountain down.</h5>
+                </div>
+            </div>
+        </div>
+    </section>   
+    <section id="guess-form">
+        <div class="container p-5">
+            <div class="row">
+                <div class="text-center align-items-center justify-content-center">
+                    <h2 id = "guess" class="text-dark">My Guess:</h2>
+                        <input id="userResponse"><br>
+                        <button onclick="responseCheck()"> Submit </button>
+                        <h5 id="message" class="text-dark">   </h5>
+                        <script>
+                            function responseCheck() {
+                                let userResponse = document.querySelector("#userResponse");
+                                let message = document.querySelector("#message");
+
+                                message.innerHTML = "Your guess was: " + userResponse.value + ", and the correct answer was: 'time'";
+                                }
+                        </script>
+                </div>        
+            </div>
+        </div>
+    </section> 
+    <!-- Footer -->
+    <footer>
+        <section id = "footer">
+        <div class="text-center">
+            <h5>Don't mind my disorganized chaos, I'm just playing around with Bootstrap templates and CSS.</h5>
+            <p>Photo by <a href="https://unsplash.com/@towfiqu999999?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Towfiqu barbhuiya</a> on <a href="https://unsplash.com/photos/oZuBNC-6E2s?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+        </div>
+        </section>
+    </footer>
+</body>
+</html>
